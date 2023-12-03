@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:travel_app_se/Widgets/card.dart';
 
-class DetailsPage extends StatefulWidget {
-  const DetailsPage({super.key});
+class DetailsPageMurree extends StatefulWidget {
+  const DetailsPageMurree({super.key});
 
   @override
-  State<DetailsPage> createState() => _DetailsPageState();
+  State<DetailsPageMurree> createState() => _DetailsPageState();
 }
 
 String murree =
@@ -18,7 +18,7 @@ String skurdu =
 String swat =
     "Swat is a picturesque valley located in the Khyber Pakhtunkhwa province of Pakistan. Often referred to as the Switzerland of Pakistan, Swat is renowned for its stunning natural beauty, lush green valleys, meandering rivers, and snow-capped mountains. The valley has a rich cultural and historical heritage, with archaeological sites dating back to the Gandhara civilization.The Swat Valley has been a popular tourist destination for its pleasant climate, scenic landscapes, and cultural attractions. Mingora, the largest city in Swat, serves as the commercial and administrative center. Malam Jabba, a hill station in Swat, is known for its ski resorts and is a popular destination for winter sports enthusiasts.";
 
-class _DetailsPageState extends State<DetailsPage> {
+class _DetailsPageState extends State<DetailsPageMurree> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,6 +64,182 @@ class _DetailsPageState extends State<DetailsPage> {
                 ),
               ),
             ],
+          ),
+        ));
+  }
+}
+
+class DetailsIslamabad extends StatefulWidget {
+  const DetailsIslamabad({super.key});
+
+  @override
+  State<DetailsIslamabad> createState() => _DetailsIslamabadState();
+}
+
+class _DetailsIslamabadState extends State<DetailsIslamabad> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('Details'),
+          centerTitle: true,
+        ),
+        body: Card(
+          child: Column(
+            children: [
+              const Image(
+                image: AssetImage('assets/Islamabad1.png'),
+              ),
+              const ListTile(
+                title: Text('Islamabad', style: TextStyle(fontSize: 28)),
+                subtitle: Text('Pakistan', style: TextStyle(fontSize: 12)),
+                // trailing:
+                //     TextButton(onPressed: () {}, child: const Text('Book Now')),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Row(
+                children: [
+                  const SizedBox(
+                    width: 18,
+                  ),
+                  Expanded(
+                      child: Text(
+                    islamabad,
+                    textAlign: TextAlign.start,
+                  )),
+                ],
+              ),
+              const SizedBox(
+                height: 50,
+              ),
+              SizedBox(
+                width: 360,
+                child: FloatingActionButton(
+                  onPressed: () {},
+                  child: const Text('Book Now'),
+                ),
+              ),
+            ],
+          ),
+        ));
+  }
+}
+
+class DetailsSkardu extends StatefulWidget {
+  const DetailsSkardu({super.key});
+
+  @override
+  State<DetailsSkardu> createState() => _DetailsSkarduState();
+}
+
+class _DetailsSkarduState extends State<DetailsSkardu> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('Details'),
+          centerTitle: true,
+        ),
+        body: Card(
+          child: Column(
+            children: [
+              const Image(
+                image: AssetImage('assets/Skurdu1.png'),
+              ),
+              const ListTile(
+                title: Text('Skardu', style: TextStyle(fontSize: 28)),
+                subtitle: Text('Pakistan', style: TextStyle(fontSize: 12)),
+                // trailing:
+                //     TextButton(onPressed: () {}, child: const Text('Book Now')),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Row(
+                children: [
+                  const SizedBox(
+                    width: 18,
+                  ),
+                  Expanded(
+                      child: Text(
+                    skurdu,
+                    textAlign: TextAlign.start,
+                  )),
+                ],
+              ),
+              const SizedBox(
+                height: 50,
+              ),
+              SizedBox(
+                width: 360,
+                child: FloatingActionButton(
+                  onPressed: () {},
+                  child: const Text('Book Now'),
+                ),
+              ),
+            ],
+          ),
+        ));
+  }
+}
+
+class DetailsSwat extends StatefulWidget {
+  const DetailsSwat({super.key});
+
+  @override
+  State<DetailsSwat> createState() => _DetailsSwatState();
+}
+
+class _DetailsSwatState extends State<DetailsSwat> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('Details'),
+          centerTitle: true,
+        ),
+        body: SingleChildScrollView(
+          child: Card(
+            child: Column(
+              children: [
+                const Image(
+                  image: AssetImage('assets/Swat1.png'),
+                ),
+                const ListTile(
+                  title: Text('Swat', style: TextStyle(fontSize: 28)),
+                  subtitle: Text('Pakistan', style: TextStyle(fontSize: 12)),
+                  // trailing:
+                  //     TextButton(onPressed: () {}, child: const Text('Book Now')),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  children: [
+                    const SizedBox(
+                      width: 18,
+                    ),
+                    Expanded(
+                        child: Text(
+                      swat,
+                      textAlign: TextAlign.start,
+                    )),
+                  ],
+                ),
+                const SizedBox(
+                  height: 50,
+                ),
+                SizedBox(
+                  width: 360,
+                  child: FloatingActionButton(
+                    onPressed: () {},
+                    child: const Text('Book Now'),
+                  ),
+                ),
+              ],
+            ),
           ),
         ));
   }
