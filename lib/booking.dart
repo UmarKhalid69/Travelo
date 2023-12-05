@@ -111,18 +111,17 @@ class _BookingMurreeState extends State<Booking> {
               },
             ),
           ),
-
+          Padding(
+            padding: const EdgeInsets.only(top: 16.0),
+            child: Text(
+              'Number of Tickets: $_counter',
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+          ),
           // counter of tickets
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 16.0),
-                child: Text(
-                  'Number of Tickets: $_counter',
-                  style: Theme.of(context).textTheme.headlineMedium,
-                ),
-              ),
               // counter buttons
               Padding(
                 padding: const EdgeInsets.only(top: 16.0),
