@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travel_app_se/Widgets/card.dart';
+import 'package:travel_app_se/booking.dart';
 
 class DetailsPageMurree extends StatefulWidget {
   const DetailsPageMurree({super.key});
@@ -59,7 +60,14 @@ class _DetailsPageState extends State<DetailsPageMurree> {
               SizedBox(
                 width: 360,
                 child: FloatingActionButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Booking(),
+                      ),
+                    );
+                  },
                   child: const Text('Book Now'),
                 ),
               ),
@@ -117,7 +125,14 @@ class _DetailsIslamabadState extends State<DetailsIslamabad> {
               SizedBox(
                 width: 360,
                 child: FloatingActionButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Booking(),
+                      ),
+                    );
+                  },
                   child: const Text('Book Now'),
                 ),
               ),
@@ -175,7 +190,14 @@ class _DetailsSkarduState extends State<DetailsSkardu> {
               SizedBox(
                 width: 360,
                 child: FloatingActionButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Booking(),
+                      ),
+                    );
+                  },
                   child: const Text('Book Now'),
                 ),
               ),
@@ -234,7 +256,14 @@ class _DetailsSwatState extends State<DetailsSwat> {
                 SizedBox(
                   width: 360,
                   child: FloatingActionButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Booking(),
+                        ),
+                      );
+                    },
                     child: const Text('Book Now'),
                   ),
                 ),

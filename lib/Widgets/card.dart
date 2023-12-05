@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_app_se/booking.dart';
 import 'package:travel_app_se/details.dart';
 
 class CardTile extends StatefulWidget {
@@ -46,7 +47,15 @@ class _CardTileState extends State<CardTile> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  TextButton(onPressed: () {}, child: const Text('Book Now')),
+                  TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Booking()),
+                        );
+                      },
+                      child: const Text('Book Now')),
                   TextButton(
                     onPressed: () {
                       Navigator.push(
@@ -88,7 +97,15 @@ class _CardTileState extends State<CardTile> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  TextButton(onPressed: () {}, child: const Text('Book Now')),
+                  TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Booking()),
+                        );
+                      },
+                      child: const Text('Book Now')),
                   TextButton(
                     onPressed: () {
                       Navigator.push(
@@ -130,7 +147,15 @@ class _CardTileState extends State<CardTile> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  TextButton(onPressed: () {}, child: const Text('Book Now')),
+                  TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Booking()),
+                        );
+                      },
+                      child: const Text('Book Now')),
                   TextButton(
                     onPressed: () {
                       Navigator.push(
@@ -172,7 +197,15 @@ class _CardTileState extends State<CardTile> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  TextButton(onPressed: () {}, child: const Text('Book Now')),
+                  TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Booking()),
+                        );
+                      },
+                      child: const Text('Book Now')),
                   TextButton(
                     onPressed: () {
                       Navigator.push(
