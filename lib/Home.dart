@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travel_app_se/Widgets/Navbar.dart';
 import 'package:travel_app_se/Widgets/card.dart';
+import 'package:travel_app_se/history.dart';
 import 'package:travel_app_se/login.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -19,14 +20,22 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
         appBar: AppBar(
           leading: IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.people_alt_outlined),
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const History(),
+                  ));
+            },
+            icon: const Icon(Icons.history),
           ),
           title: const Text('Home'),
           centerTitle: true,
           actions: [
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                // Navigate to Settings Screen
+              },
               icon: const Icon(Icons.settings),
             ),
             IconButton(
