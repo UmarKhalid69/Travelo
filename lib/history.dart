@@ -20,7 +20,9 @@ class _HistoryState extends State<History> {
         stream: FirebaseFirestore.instance.collection('Bookings').snapshots(),
         builder: (BuildContext context, snapshot) {
           if (!snapshot.hasData) {
-            return const Text('No Bookings');
+            return const Center(
+              child: CircularProgressIndicator(),
+            );
           }
           return ListView.builder(
             itemCount: snapshot.data?.docs.length,

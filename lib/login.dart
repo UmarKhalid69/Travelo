@@ -11,6 +11,12 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  // Email controller
+  final TextEditingController emailController = TextEditingController();
+// Password controller
+  final TextEditingController passwordController = TextEditingController();
+
+  bool isPasswordVisible = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,7 +50,7 @@ class _LoginScreenState extends State<LoginScreen> {
               width: 360,
               child: TextFormField(
                 controller: passwordController,
-                obscureText: true,
+                obscureText: !isPasswordVisible,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10.0),
@@ -53,6 +59,20 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   hintText: 'Enter your password',
                   labelText: 'Password',
+                  suffixIcon: GestureDetector(
+                    onTap: () {
+                      // Toggle the password visibility
+                      setState(() {
+                        isPasswordVisible = !isPasswordVisible;
+                      });
+                    },
+                    child: Icon(
+                      isPasswordVisible
+                          ? Icons.visibility
+                          : Icons.visibility_off,
+                      color: Colors.grey,
+                    ),
+                  ),
                 ),
               ),
             ),
@@ -93,7 +113,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 onPressed: () {
                   FirebaseAuth.instance
                       .signInWithEmailAndPassword(
-                          email: email, password: password)
+                    email: emailController.text,
+                    password: passwordController.text,
+                  )
                       .then((value) {
                     Navigator.pushAndRemoveUntil(
                       context,

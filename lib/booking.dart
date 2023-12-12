@@ -10,7 +10,7 @@ class Booking extends StatefulWidget {
 }
 
 class _BookingMurreeState extends State<Booking> {
-  int _counter = 0;
+  int _counter = 1;
 
   void _incrementCounter() {
     setState(() {
@@ -135,7 +135,7 @@ class _BookingMurreeState extends State<Booking> {
                 child: FloatingActionButton(
                   onPressed: () {
                     setState(() {
-                      if (_counter > 0) {
+                      if (_counter > 1) {
                         _counter--;
                       }
                     });
