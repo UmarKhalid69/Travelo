@@ -107,6 +107,9 @@ class _SignUpState extends State<SignUp> {
                     .createUserWithEmailAndPassword(
                         email: email, password: password)
                     .then((value) {
+                  emailController.clear();
+                  passwordController.clear();
+                  confirmPasswordController.clear();
                   Navigator.pushAndRemoveUntil(
                     context,
                     MaterialPageRoute(builder: (context) => const HomeScreen()),
@@ -114,8 +117,8 @@ class _SignUpState extends State<SignUp> {
                   );
                 }).onError((error, stackTrace) {
                   ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(
-                      content: Text('Error'),
+                    SnackBar(
+                      content: Text(error.toString()),
                     ),
                   );
                 });
